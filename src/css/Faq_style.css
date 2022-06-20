@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* End Reset */
+
+html{
+    background: linear-gradient(#af67e9, #6565e7);
+    background-size: cover;
+}
+
+body{
+    font-family: "Kumbh Sans", serif;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+/* Estilizando container */
+.faq{
+    width: 65%;
+    min-height: 450px;
+    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.3); /*https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow*/
+    background-color: #fff;
+    display: flex;    
+    align-items: center;
+    border-radius: 30px;
+}
+
+/* Estilizando imagem */
+.faq .illustration{
+    position: relative;
+    left: -120px;
+    width: 50%;
+    margin: 50px 0;
+}
+
+.faq .content{
+    width: 40%;
+    padding-bottom: 20px;
+}
+
+/* Estilizando "FAQ" */
+.faq .content h1{
+    font-size: 32px;
+    font-weight: 700;
+    margin: 10px 0 30px;
+}
+
+.faq .content .itens{
+    list-style-type: none;
+}
+
+/* Estilizando itens */
+.faq .content .itens .item{
+    cursor: pointer;
+    background-image: url(../img/icone-seta-pra-baixo.png);
+    background-repeat: no-repeat;
+    background-position: top 8px right 0;
+    background-size: 12px;
+    border-bottom: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+.faq .content .itens .item:last-child{
+    border-bottom: none;
+}
+
+.item .question{
+    padding-bottom: 15px;
+    font-size: 18px;
+    width: 90%;
+    transition: 0.2s ease;
+}
+
+.item .question:hover{
+    color: #f47c57;
+}
+
+.item .answer{
+    display: none;
+    padding-bottom: 15px;
+}
+
+/* Estilizando item ativo */
+
+.faq .itens .item.active h2 {
+    font-weight: 700;
+}
+
+.faq .itens .item.active .answer {
+    display: block;
+}
+.faq .itens .item.active {
+    background-image: url(../img/icone-seta-pra-cima.png);
+}
+
+/* Responsivo */
+@media(max-width: 1140px){
+    .faq{
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .faq .content{
+        width: 100%;
+    }
+
+    .faq .content h1{
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .faq .itens{
+        width: 80%;        
+        margin: 0 auto;
+    }
+
+    .faq .itens .question{
+        font-size: 16px;        
+    } 
+
+    .faq .illustration{
+        width: 40%;
+        left: 0;
+        margin: 30px 0;
+    }
+}
+
+
